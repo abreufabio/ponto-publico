@@ -1,0 +1,82 @@
+/* Estilos globais, variáveis, ícones e acessibilidade. */
+
+:root {
+  --ink: #193332;
+  --forest: #113d32;
+  --forest-deep: #102f2d;
+  --mint: #b8e6ca;
+  --mint-soft: #e9f6eb;
+  --cream: #f6f6f0;
+  --paper: #fffefa;
+  --line: #e3e9e0;
+  --muted: #6e7e78;
+  --blue: #dceaf7;
+  --shadow: 0 15px 55px rgba(26,54,44,.07);
+  --radius: 24px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  font-family: Inter,"Segoe UI",Roboto,Arial,sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+button,input,select {
+  font: inherit;
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
+  outline: 3px solid #b4b352;
+  outline-offset: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+.shell {
+  max-width: 1312px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 16px;
+  background: white;
+  padding: 12px 20px;
+  z-index: 9999;
+  color: var(--forest);
+}
+
+.skip-link:focus {
+  top: 16px;
+}

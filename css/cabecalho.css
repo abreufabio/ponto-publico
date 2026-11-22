@@ -1,0 +1,109 @@
+/* Cabeçalho e navegação principal. */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  background: #103b31;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,.11);
+}
+
+.site-nav {
+  min-height: 87px;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  color: white;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -1.05px;
+}
+
+.brand:hover {
+  color: white;
+}
+
+.brand-symbol {
+  width: 37px;
+  height: 37px;
+  background: #c4e9d0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #143d32;
+  transform: rotate(-7deg);
+}
+
+.brand-symbol .i {
+  width: 23px;
+  height: 23px;
+  transform: rotate(7deg);
+  stroke-width: 2.1;
+}
+
+.brand-accent {
+  color: #bce6c7;
+}
+
+.brand-period {
+  color: #e2c680;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  margin: auto;
+}
+
+.nav-link-custom {
+  color: #c9e1d6;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+.nav-link-custom:hover {
+  color: white;
+}
+
+.nav-pill {
+  padding: 11px 17px;
+  border: 1px solid rgba(215,244,224,.28);
+  border-radius: 40px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-pill:hover {
+  border-color: var(--mint);
+  color: white;
+}
+
+.nav-pill .i {
+  width: 15px;
+  height: 15px;
+}
+
+.mobile-menu {
+  display: none;
+  appearance: none;
+  border: 1px solid rgba(255,255,255,.25);
+  background: none;
+  border-radius: 10px;
+  width: 43px;
+  height: 42px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,263 @@
+/* Calendário de feriados nacionais. */
+
+.calendar-section {
+  background: #eaf2e9;
+}
+
+.calendar-section .section-lead {
+  max-width: 365px;
+}
+
+.calendar-note {
+  display: flex;
+  gap: 13px;
+  margin-top: 35px;
+  max-width: 340px;
+  color: #63796c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.calendar-note p {
+  margin: 0;
+}
+
+.calendar-note>.i {
+  width: 20px;
+  height: 20px;
+  color: #59866a;
+  margin-top: 2px;
+}
+
+.calendar-panel {
+  background: #fffefa;
+  border-radius: 21px;
+  padding: 28px 30px 14px;
+  box-shadow: var(--shadow);
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-overline {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #879b8a;
+  margin-bottom: 7px;
+}
+
+.panel-heading h3 {
+  font-size: 23px;
+  letter-spacing: -.7px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.panel-heading h3 span {
+  color: #59947b;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.year-select {
+  width: 111px;
+  border-color: #dfe7de;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none;
+  padding: 9px 28px 9px 11px;
+}
+
+.icon-button {
+  border: 1px solid #e1e9df;
+  background: #f8faf5;
+  border-radius: 9px;
+  width: 40px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  color: #557363;
+}
+
+.icon-button .i {
+  width: 17px;
+  height: 17px;
+}
+
+.icon-button:hover {
+  background: #eaf4e8;
+}
+
+.icon-button:disabled {
+  opacity: .4;
+}
+
+.holiday-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 20px 0 9px;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid #e1e9df;
+  background: #f3f6f1;
+  border-radius: 9px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.segment {
+  border: 0;
+  background: transparent;
+  border-radius: 7px;
+  padding: 8px 13px;
+  color: #85948c;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.segment.active {
+  background: white;
+  color: #2b5f45;
+  box-shadow: 0 2px 7px rgba(23,50,33,.07);
+}
+
+.count-label {
+  font-size: 11px;
+  color: #8c9b90;
+  font-weight: 650;
+}
+
+.holiday-list {
+  min-height: 220px;
+}
+
+.holiday-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 2px;
+  border-bottom: 1px solid #edf0eb;
+}
+
+.holiday-item:last-child {
+  border-bottom: 0;
+}
+
+.date-tile {
+  flex: none;
+  width: 58px;
+  height: 56px;
+  background: #f0f7ec;
+  border: 1px solid #e4efdf;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-tile strong {
+  font-size: 21px;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  color: #42664b;
+}
+
+.date-tile small {
+  font-size: 9px;
+  color: #7b9b7f;
+  letter-spacing: 1.4px;
+  font-weight: 800;
+}
+
+.holiday-detail {
+  min-width: 0;
+  flex: 1;
+}
+
+.holiday-detail h4 {
+  font-size: 13px;
+  color: #2d4437;
+  font-weight: 780;
+  margin: 0 0 4px;
+}
+
+.holiday-detail p {
+  font-size: 10px;
+  color: #9cab9f;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.holiday-state {
+  font-size: 10px;
+  font-weight: 770;
+  color: #4e8b68;
+  white-space: nowrap;
+}
+
+.holiday-state.past {
+  color: #b0bdb2;
+}
+
+.holiday-state.today {
+  color: #8a7433;
+}
+
+.panel-footnote {
+  font-size: 10px;
+  color: #99a79d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding: 17px 2px;
+  margin-top: 10px;
+}
+
+.panel-footnote .i {
+  width: 14px;
+  height: 14px;
+}
+
+.loading-message {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #718a78;
+  padding: 25px 0;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 18px;
+  color: #87968a;
+  font-size: 12px;
+}
+
+.no-results .i {
+  display: block;
+  margin: 0 auto 12px;
+  color: #7ba48c;
+  width: 30px;
+  height: 30px;
+}

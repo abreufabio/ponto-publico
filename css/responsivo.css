@@ -1,0 +1,364 @@
+/* Ajustes de tablet, celular e movimento reduzido. */
+
+@media (max-width:1199px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 61px;
+  }
+
+  .visual-chip-top {
+    right: -16px;
+  }
+
+  .visual-chip-bottom {
+    left: -18px;
+  }
+
+  .input-action {
+    flex-wrap: wrap;
+  }
+
+  .input-action .action-button {
+    min-height: 48px;
+  }
+
+}
+
+@media (max-width:991px) {
+  .site-nav {
+    gap: 22px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-pill {
+    display: none;
+  }
+
+  .hero-container {
+    padding-top: 72px;
+  }
+
+  .hero h1 {
+    font-size: clamp(50px,6vw,65px);
+  }
+
+  .hero .row {
+    min-height: 380px;
+  }
+
+  .hero-visual {
+    height: 370px;
+  }
+
+  .visual-card-main {
+    width: 265px;
+  }
+
+  .visual-chip-top {
+    right: 10px;
+  }
+
+  .visual-chip-bottom {
+    left: 0;
+  }
+
+  .section {
+    padding: 78px 0;
+  }
+
+  .calendar-section .section-lead {
+    max-width: 700px;
+  }
+
+  .calendar-note {
+    max-width: 680px;
+    margin: 20px 0 0;
+  }
+
+  .city-stat {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .about-emblem {
+    height: 230px;
+  }
+
+  .ring-one {
+    width: 235px;
+    height: 235px;
+  }
+
+  .ring-two {
+    width: 185px;
+    height: 185px;
+  }
+
+  .emblem-core {
+    width: 100px;
+    height: 100px;
+  }
+
+  .emblem-core .i {
+    width: 60px;
+    height: 60px;
+  }
+
+}
+
+@media (max-width:767px) {
+  .shell {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-nav {
+    min-height: 72px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    padding: 15px 0 19px;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link-custom {
+    padding: 11px 0;
+    border-top: 1px solid rgba(255,255,255,.09);
+  }
+
+  .hero-container {
+    padding-top: 55px;
+    padding-bottom: 23px;
+  }
+
+  .hero .row {
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px,9vw,60px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero h1 em {
+    letter-spacing: -1.7px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .hero-bottom {
+    margin-top: 56px;
+  }
+
+  .hero-proof {
+    margin-top: 29px;
+    align-items: flex-start;
+  }
+
+  .hero-proof .i {
+    margin-top: 2px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section h2 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+
+  .section-intro {
+    margin-bottom: 24px;
+  }
+
+  .section-number {
+    display: none;
+  }
+
+  .service-card {
+    padding: 26px 23px;
+    min-height: unset;
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+  }
+
+  .input-action {
+    flex-wrap: nowrap;
+  }
+
+  .input-action .form-control {
+    flex: 1;
+  }
+
+  .input-action .action-button {
+    flex: none;
+    padding: 10px 14px;
+  }
+
+  .calendar-panel {
+    padding: 23px 19px 10px;
+  }
+
+  .municipal-panel {
+    padding: 22px;
+  }
+
+  .about-section {
+    padding: 65px 0;
+  }
+
+  .about-section h2 {
+    font-size: 35px;
+  }
+
+  .about-emblem {
+    display: none;
+  }
+
+  .footer-right {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .site-footer {
+    padding-top: 29px;
+  }
+
+}
+
+@media (max-width:420px) {
+  .shell {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .brand-symbol {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-actions {
+    gap: 18px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-bottom {
+    font-size: 8px;
+  }
+
+  .service-card {
+    padding: 22px 18px;
+  }
+
+  .input-action {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-action .action-button {
+    width: 100%;
+  }
+
+  .result-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .calendar-controls {
+    width: 100%;
+  }
+
+  .year-select {
+    width: calc(100% - 49px);
+  }
+
+  .holiday-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .holiday-item {
+    gap: 11px;
+  }
+
+  .holiday-state {
+    font-size: 9px;
+  }
+
+  .date-tile {
+    width: 47px;
+    height: 52px;
+  }
+
+  .date-tile strong {
+    font-size: 19px;
+  }
+
+  .municipal-panel {
+    padding: 20px 16px;
+  }
+
+  .section h2 {
+    font-size: 31px;
+  }
+
+  .footer-small {
+    flex-direction: column;
+  }
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+}

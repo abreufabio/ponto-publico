@@ -1,0 +1,142 @@
+/* Explorador de municípios. */
+
+.cities-section {
+  background: #f7f7f2;
+}
+
+.municipal-panel {
+  background: var(--paper);
+  border: 1px solid #eef0e9;
+  padding: 32px;
+  border-radius: 21px;
+  box-shadow: var(--shadow);
+}
+
+.municipal-panel .form-select,.municipal-panel .form-control {
+  min-height: 51px;
+  border: 1px solid #dfe7dc;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: white;
+  color: #3f584a;
+}
+
+.municipal-panel .form-control:disabled {
+  background: #f4f6f1;
+}
+
+.search-wrap {
+  position: relative;
+}
+
+.search-wrap .i {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  width: 18px;
+  height: 18px;
+  color: #8ba398;
+  pointer-events: none;
+}
+
+.search-wrap input {
+  padding-left: 42px;
+}
+
+.city-stat {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+  min-height: 50px;
+}
+
+.city-stat strong {
+  display: block;
+  color: #275a48;
+  font-size: 25px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.city-stat span {
+  display: block;
+  color: #95a49b;
+  font-size: 10px;
+}
+
+.cities-result-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 26px;
+  padding-top: 25px;
+  padding-bottom: 16px;
+  font-size: 12px;
+  font-weight: 770;
+  color: #466153;
+}
+
+.region-pill {
+  background: #ecf6ea;
+  padding: 5px 10px;
+  border-radius: 40px;
+  font-size: 10px;
+  color: #3a7350;
+}
+
+.city-list {
+  min-height: 70px;
+}
+
+.city-item {
+  border: 1px solid #e6ece3;
+  background: #fafcf8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 49px;
+  padding: 10px 12px;
+  color: #4d6c59;
+  font-size: 12px;
+  font-weight: 710;
+}
+
+.city-item:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: none;
+  border-radius: 50%;
+  background: #80b99c;
+}
+
+.empty-cities {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #96a89b;
+  padding: 17px 0;
+  font-size: 12px;
+}
+
+.empty-cities .i {
+  width: 19px;
+  height: 19px;
+}
+
+.cities-more {
+  border-radius: 9px;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 11px 18px;
+}
+
+.cities-more .i {
+  width: 14px;
+  height: 14px;
+  margin-left: 13px;
+}

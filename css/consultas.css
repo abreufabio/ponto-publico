@@ -1,0 +1,383 @@
+/* Serviços, formulários e resultados de CEP/DDD. */
+
+.section {
+  padding: 101px 0;
+}
+
+.section-intro {
+  margin-bottom: 32px;
+}
+
+.overline {
+  color: #3e806b;
+  margin: 0 0 18px;
+}
+
+.section h2 {
+  font-size: clamp(32px,3.35vw,49px);
+  letter-spacing: -2.1px;
+  line-height: 1.16;
+  font-weight: 790;
+  margin: 0 0 16px;
+}
+
+.section h2 span {
+  color: #559079;
+  font-family: Georgia,"Times New Roman",serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.section-lead {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #718078;
+  max-width: 590px;
+  margin: 0;
+}
+
+.section-number {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  color: #2e594c;
+}
+
+.section-number span {
+  font-size: 12px;
+  color: #acbbb2;
+}
+
+.services-section {
+  background: #f7f7f2;
+}
+
+.service-card {
+  border-radius: 21px;
+  background: #fffefa;
+  padding: 31px 34px;
+  box-shadow: var(--shadow);
+  min-height: 405px;
+}
+
+.service-card-blue {
+  background: #f2f8fb;
+}
+
+.service-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+}
+
+.service-icon .i {
+  width: 21px;
+  height: 21px;
+}
+
+.icon-green {
+  background: #e4f5e9;
+  color: #32694e;
+}
+
+.icon-blue {
+  background: #dceaf3;
+  color: #366786;
+}
+
+.service-tag {
+  font-size: 9px;
+  letter-spacing: 1.45px;
+  color: #86958b;
+  font-weight: 800;
+}
+
+.service-card h3 {
+  font-size: 25px;
+  letter-spacing: -.85px;
+  font-weight: 775;
+  line-height: 1.2;
+  margin-bottom: 11px;
+}
+
+.service-description {
+  font-size: 13px;
+  line-height: 1.78;
+  color: #75847d;
+  max-width: 470px;
+  margin-bottom: 23px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #455e53;
+}
+
+.input-action {
+  display: flex;
+  gap: 9px;
+}
+
+.input-action .form-control {
+  flex: 1;
+  min-width: 0;
+  border-radius: 9px;
+  border-color: #dfe6de;
+  background: #fff;
+  padding: 11px 14px;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.input-action .form-control:focus,.municipal-panel .form-control:focus,.municipal-panel .form-select:focus {
+  border-color: #71ab8c;
+  box-shadow: 0 0 0 3px rgba(74,132,102,.1);
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 17px;
+  background: #123e34;
+  border: 1px solid #123e34;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.action-button:hover {
+  background: #235d47;
+  border-color: #235d47;
+}
+
+.action-button:disabled {
+  opacity: .66;
+  cursor: wait;
+}
+
+.action-button .i {
+  width: 15px;
+  height: 15px;
+}
+
+.input-hint {
+  font-size: 11px;
+  color: #85948a;
+  margin-top: 11px;
+}
+
+.hint-button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
+  color: #368060;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.feedback-slot:empty {
+  display: none;
+}
+
+.feedback-slot .alert {
+  font-size: 12px;
+  border-radius: 11px;
+  margin: 18px 0 0;
+  padding: 13px 15px;
+}
+
+.feedback-slot .alert a,.feedback-slot .alert button {
+  color: inherit;
+  font-weight: 800;
+}
+
+.feedback-slot .alert-warning {
+  background: #fff4de;
+  border: 1px solid #f0dfb8;
+  color: #765626;
+}
+
+.feedback-slot .alert-danger {
+  background: #fff0ed;
+  border: 1px solid #f2cfc8;
+  color: #9e3e32;
+}
+
+.feedback-slot .alert-info {
+  background: #eaf4f7;
+  border: 1px solid #d2e8ec;
+  color: #2c6474;
+}
+
+.retry-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.result-slot {
+  margin-top: 18px;
+}
+
+.empty-state {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border: 1px dashed #dfe8dd;
+  border-radius: 11px;
+  color: #91a197;
+  font-size: 11px;
+  min-height: 72px;
+}
+
+.empty-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 9px;
+  background: #ecf4ed;
+  display: grid;
+  place-items: center;
+  color: #7eaf93;
+}
+
+.empty-icon .i {
+  width: 17px;
+  height: 17px;
+}
+
+.result-box {
+  border: 1px solid #dce9db;
+  background: #f4faf2;
+  border-radius: 13px;
+  padding: 18px 20px;
+  animation: rise .25s ease-out;
+}
+
+.result-box-blue {
+  background: #eaf2f9;
+  border-color: #dce5ee;
+}
+
+.result-kicker {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #69927a;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.result-heading {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -.3px;
+  margin: 0 0 13px;
+  color: #27463b;
+}
+
+.result-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+}
+
+.result-meta dt {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #7c9384;
+  margin-bottom: 2px;
+}
+
+.result-meta dd {
+  font-size: 13px;
+  font-weight: 690;
+  color: #294b3c;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #dfe9dc;
+  margin-top: 15px;
+  padding-top: 13px;
+}
+
+.result-actions button {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #30775b;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0;
+}
+
+.result-actions .i {
+  width: 14px;
+  height: 14px;
+}
+
+.result-actions span {
+  font-size: 10px;
+  color: #8ba092;
+}
+
+.ddd-city-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 126px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.ddd-city-list span {
+  font-size: 10px;
+  background: #fff;
+  border: 1px solid #dbe8eb;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: #46677b;
+}
+
+@keyframes rise {
+  from {
+    opacity: .4;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

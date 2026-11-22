@@ -1,0 +1,196 @@
+/* Sobre o projeto, rodapé e aviso de cópia. */
+
+.about-section {
+  background: #173d35;
+  color: white;
+  padding: 88px 0;
+  overflow: hidden;
+}
+
+.overline-light {
+  color: #a8dab9;
+}
+
+.about-section h2 {
+  max-width: 730px;
+  font-size: clamp(35px,3.5vw,51px);
+  line-height: 1.16;
+  letter-spacing: -2px;
+  font-weight: 770;
+  margin: 0 0 21px;
+}
+
+.about-section h2 em {
+  font-style: italic;
+  color: #a8d7b3;
+  font-family: Georgia,serif;
+  font-weight: 400;
+}
+
+.about-section p:not(.overline) {
+  font-size: 14px;
+  color: #b7d0c4;
+  max-width: 610px;
+  line-height: 1.85;
+}
+
+.source-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.source-pills a {
+  color: #dbede0;
+  border: 1px solid rgba(217,235,220,.28);
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.source-pills a:hover {
+  border-color: #bde5c4;
+  color: white;
+}
+
+.source-pills .i {
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+}
+
+.about-emblem {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emblem-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(192,230,200,.18);
+}
+
+.ring-one {
+  width: 310px;
+  height: 310px;
+}
+
+.ring-two {
+  width: 225px;
+  height: 225px;
+}
+
+.emblem-core {
+  width: 130px;
+  height: 130px;
+  background: #bce4c4;
+  color: #174537;
+  border-radius: 34px;
+  transform: rotate(-9deg);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 19px 65px rgba(2,20,8,.19);
+}
+
+.emblem-core .i {
+  width: 74px;
+  height: 74px;
+  transform: rotate(9deg);
+  stroke-width: 1.5;
+}
+
+.emblem-point {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d4c085;
+  position: absolute;
+}
+
+.point-one {
+  top: 30px;
+  right: 80px;
+}
+
+.point-two {
+  bottom: 58px;
+  left: 45px;
+}
+
+.site-footer {
+  background: #102c28;
+  color: white;
+  padding: 35px 0 22px;
+}
+
+.brand-footer {
+  font-size: 20px;
+}
+
+.site-footer p {
+  margin: 13px 0 0;
+  color: #91b1a1;
+  font-size: 11px;
+}
+
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 11px;
+  color: #91b1a1;
+}
+
+.footer-right a {
+  color: #cdecd4;
+  font-weight: 750;
+}
+
+.footer-divider {
+  margin: 26px 0 15px;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.footer-small {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 10px;
+  color: #85a69a;
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  background: #113e32;
+  color: white;
+  box-shadow: 0 15px 30px rgba(0,0,0,.22);
+  padding: 12px 19px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.copy-toast[hidden] {
+  display: none;
+}
+
+.copy-toast .i {
+  width: 16px;
+  height: 16px;
+  color: #b6e7c2;
+}
