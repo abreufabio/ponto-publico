@@ -1,0 +1,23 @@
+# Arquivos de apresentação e materiais locais (não publicados)
+README_ENTREGA.md
+video-link.txt
+video.mp4
+*.mp4
+*.mkv
+*.mov
+*.webm
+
+# Pacotes de distribuição e documentos auxiliares
+*.zip
+*.rar
+docs/
+
+# Arquivos de editor, sistema e temporários
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+__pycache__/

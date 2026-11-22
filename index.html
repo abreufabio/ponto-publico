@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10283f">
-  <meta name="description" content="Ponto Público reúne informações úteis sobre CEP, DDD, feriados e municípios brasileiros em um só lugar.">
+  <meta name="description"
+    content="Ponto Público reúne informações úteis sobre CEP, DDD, feriados e municípios brasileiros em um só lugar.">
   <title>Ponto Público | Informação que aproxima</title>
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
-    <script defer src="js/core/config.js"></script>
+  <script defer src="js/core/config.js"></script>
   <script defer src="js/core/api.js"></script>
   <script defer src="js/core/ui.js"></script>
   <script defer src="js/servicos/cep.js"></script>
@@ -18,23 +20,65 @@
   <script defer src="js/servicos/municipios.js"></script>
   <script defer src="js/app.js"></script>
 </head>
+
 <body>
   <svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.8 4.2-4.2 2.8 2.8-4.2z"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
-    <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 2.5 5.2 2 2 0 0 1 4.5 3h3a2 2 0 0 1 2 1.7l.4 2.7a2 2 0 0 1-.6 1.8L7.7 11a15 15 0 0 0 5.3 5.3l1.8-1.6a2 2 0 0 1 1.8-.6l2.7.4a2 2 0 0 1 1.7 2.1Z"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-    <symbol id="i-retry" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9a7.5 7.5 0 0 1 12.7-2L20 12M4 12l1.8 5a7.5 7.5 0 0 0 12.7-2"/></symbol>
-    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v5c0 6-4 9-9 11-5-2-9-5-9-11V6z"/><path d="m8 12 3 3 5-6"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9"/><path d="M19 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.5 8.5-2.8 4.2-4.2 2.8 2.8-4.2z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6" />
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M7 3v4m10-4v4M3 10h18" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path
+        d="M21 16.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 2.5 5.2 2 2 0 0 1 4.5 3h3a2 2 0 0 1 2 1.7l.4 2.7a2 2 0 0 1-.6 1.8L7.7 11a15 15 0 0 0 5.3 5.3l1.8-1.6a2 2 0 0 1 1.8-.6l2.7.4a2 2 0 0 1 1.7 2.1Z" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m16 16 5 5" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <rect x="8" y="8" width="12" height="12" rx="2" />
+      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6" />
+    </symbol>
+    <symbol id="i-retry" viewBox="0 0 24 24">
+      <path d="M20 7v5h-5M4 17v-5h5" />
+      <path d="M5.5 9a7.5 7.5 0 0 1 12.7-2L20 12M4 12l1.8 5a7.5 7.5 0 0 0 12.7-2" />
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v6M12 7h.01" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="m12 2 9 4v5c0 6-4 9-9 11-5-2-9-5-9-11V6z" />
+      <path d="m8 12 3 3 5-6" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path d="M13 5h6v6m0-6-9 9" />
+      <path d="M19 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
   </svg>
 
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -43,17 +87,24 @@
     <div class="container-xxl shell">
       <nav class="site-nav" aria-label="Navegação principal">
         <a class="brand" href="#inicio" aria-label="Ponto Público, início">
-          <span class="brand-symbol"><svg class="i"><use href="#i-compass"/></svg></span>
+          <span class="brand-symbol"><svg class="i">
+              <use href="#i-compass" />
+            </svg></span>
           <span>Ponto<span class="brand-accent">Público</span><span class="brand-period">.</span></span>
         </a>
-        <button class="mobile-menu" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links"><svg class="i"><use href="#i-menu"/></svg></button>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="menu-links"><svg class="i">
+            <use href="#i-menu" />
+          </svg></button>
         <div class="nav-links" id="menu-links">
           <a href="#consultas" class="nav-link-custom">Consultas</a>
           <a href="#feriados" class="nav-link-custom">Feriados</a>
           <a href="#municipios" class="nav-link-custom">Municípios</a>
           <a href="#sobre" class="nav-link-custom">Sobre o projeto</a>
         </div>
-        <a class="nav-pill" href="#consultas">Começar <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="nav-pill" href="#consultas">Começar <svg class="i">
+            <use href="#i-arrow" />
+          </svg></a>
       </nav>
     </div>
   </header>
@@ -67,71 +118,134 @@
           <div class="col-lg-7 hero-copy">
             <div class="eyebrow"><span class="eyebrow-dot"></span> DADOS PÚBLICOS, VIDA MAIS SIMPLES</div>
             <h1 id="titulo-principal">A informação que você precisa. <em>Sem complicação.</em></h1>
-            <p class="hero-subtitle">CEP, DDD, feriados e municípios do Brasil. Tudo em um só lugar, com acesso gratuito e informações de fontes públicas.</p>
+            <p class="hero-subtitle">CEP, DDD, feriados e municípios do Brasil. Tudo em um só lugar, com acesso gratuito
+              e informações de fontes públicas.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary hero-btn" href="#consultas">Explorar consultas <svg class="i"><use href="#i-arrow"/></svg></a>
-              <a class="hero-text-link" href="#sobre">Como funciona <svg class="i"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-primary hero-btn" href="#consultas">Explorar consultas <svg class="i">
+                  <use href="#i-arrow" />
+                </svg></a>
+              <a class="hero-text-link" href="#sobre">Como funciona <svg class="i">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
-            <div class="hero-proof"><svg class="i"><use href="#i-shield"/></svg><span>Sem cadastro. Sem pagar. Sem compartilhar dados pessoais.</span></div>
+            <div class="hero-proof"><svg class="i">
+                <use href="#i-shield" />
+              </svg><span>Sem cadastro. Sem pagar. Sem compartilhar dados pessoais.</span></div>
           </div>
           <div class="col-lg-5 d-none d-md-block" aria-hidden="true">
             <div class="hero-visual">
-              <div class="visual-orbit visual-orbit-a"></div><div class="visual-orbit visual-orbit-b"></div>
+              <div class="visual-orbit visual-orbit-a"></div>
+              <div class="visual-orbit visual-orbit-b"></div>
               <div class="visual-card visual-card-main">
-                <div class="visual-card-head"><span class="visual-live"></span> CENTRAL DE INFORMAÇÕES <span class="visual-dots">•••</span></div>
+                <div class="visual-card-head"><span class="visual-live"></span> CENTRAL DE INFORMAÇÕES <span
+                    class="visual-dots">•••</span></div>
                 <div class="visual-map"><svg viewBox="0 0 320 176" role="presentation">
-                  <defs><linearGradient id="road-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b4e1d5"/><stop offset="1" stop-color="#d0ede8"/></linearGradient></defs>
-                  <path d="M-10 74 58 50 107 73 173 28l65 31 100-20M-30 159l83-42 54 18 77-40 76 46 72-30" stroke="url(#road-gradient)" stroke-width="20" fill="none" stroke-linecap="round"/>
-                  <path d="M45-10 88 45 66 111l27 85M210-10l-6 60 25 54-13 95" stroke="#eaf4ee" stroke-width="15" fill="none" stroke-linecap="round"/>
-                  <path d="M-10 74 58 50 107 73 173 28l65 31 100-20M-30 159l83-42 54 18 77-40 76 46 72-30" stroke="#fff" stroke-width="2" opacity=".8" fill="none" stroke-dasharray="7 8"/>
-                  <circle cx="165" cy="86" r="31" fill="#ddf2ea" opacity=".8"/><circle cx="165" cy="86" r="17" fill="#114532"/><path d="M165 73a10 10 0 0 1 10 10c0 7-10 18-10 18s-10-11-10-18a10 10 0 0 1 10-10Z" fill="#a8e3bd"/><circle cx="165" cy="83" r="3.5" fill="#114532"/>
-                </svg></div>
-                <div class="visual-footer"><span class="tiny-marker"></span><span>Encontre o que importa, perto de você.</span><span class="visual-arrow">↗</span></div>
+                    <defs>
+                      <linearGradient id="road-gradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#b4e1d5" />
+                        <stop offset="1" stop-color="#d0ede8" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M-10 74 58 50 107 73 173 28l65 31 100-20M-30 159l83-42 54 18 77-40 76 46 72-30"
+                      stroke="url(#road-gradient)" stroke-width="20" fill="none" stroke-linecap="round" />
+                    <path d="M45-10 88 45 66 111l27 85M210-10l-6 60 25 54-13 95" stroke="#eaf4ee" stroke-width="15"
+                      fill="none" stroke-linecap="round" />
+                    <path d="M-10 74 58 50 107 73 173 28l65 31 100-20M-30 159l83-42 54 18 77-40 76 46 72-30"
+                      stroke="#fff" stroke-width="2" opacity=".8" fill="none" stroke-dasharray="7 8" />
+                    <circle cx="165" cy="86" r="31" fill="#ddf2ea" opacity=".8" />
+                    <circle cx="165" cy="86" r="17" fill="#114532" />
+                    <path d="M165 73a10 10 0 0 1 10 10c0 7-10 18-10 18s-10-11-10-18a10 10 0 0 1 10-10Z"
+                      fill="#a8e3bd" />
+                    <circle cx="165" cy="83" r="3.5" fill="#114532" />
+                  </svg></div>
+                <div class="visual-footer"><span class="tiny-marker"></span><span>Encontre o que importa, perto de
+                    você.</span><span class="visual-arrow">↗</span></div>
               </div>
-              <div class="visual-chip visual-chip-top"><span class="chip-icon chip-blue"><svg class="i"><use href="#i-map"/></svg></span><div><strong>27 unidades</strong><span>federativas</span></div></div>
-              <div class="visual-chip visual-chip-bottom"><span class="chip-icon chip-gold"><svg class="i"><use href="#i-calendar"/></svg></span><div><strong>Feriados</strong><span>do calendário</span></div></div>
+              <div class="visual-chip visual-chip-top"><span class="chip-icon chip-blue"><svg class="i">
+                    <use href="#i-map" />
+                  </svg></span>
+                <div><strong>27 unidades</strong><span>federativas</span></div>
+              </div>
+              <div class="visual-chip visual-chip-bottom"><span class="chip-icon chip-gold"><svg class="i">
+                    <use href="#i-calendar" />
+                  </svg></span>
+                <div><strong>Feriados</strong><span>do calendário</span></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hero-bottom"><span>O QUE VOCÊ ENCONTRA AQUI</span><div class="hero-bottom-line"></div><span>01 / 04 <svg class="i"><use href="#i-arrow"/></svg></span></div>
+        <div class="hero-bottom"><span>O QUE VOCÊ ENCONTRA AQUI</span>
+          <div class="hero-bottom-line"></div><span>01 / 04 <svg class="i">
+              <use href="#i-arrow" />
+            </svg></span>
+        </div>
       </div>
     </section>
 
     <section class="section services-section" id="consultas" aria-labelledby="consultas-title">
       <div class="container-xxl shell">
         <div class="section-intro d-flex flex-wrap align-items-end justify-content-between gap-3">
-          <div><p class="overline">SERVIÇOS ESSENCIAIS</p><h2 id="consultas-title">Resolva o básico <span>em segundos.</span></h2><p class="section-lead">Escolha uma consulta, preencha o campo e receba os dados diretamente das APIs públicas.</p></div>
+          <div>
+            <p class="overline">SERVIÇOS ESSENCIAIS</p>
+            <h2 id="consultas-title">Resolva o básico <span>em segundos.</span></h2>
+            <p class="section-lead">Escolha uma consulta, preencha o campo e receba os dados diretamente das APIs
+              públicas.</p>
+          </div>
           <div class="section-number">01 <span>/ 03</span></div>
         </div>
         <div class="row g-4">
           <div class="col-lg-7">
             <section class="service-card card border-0 h-100" aria-labelledby="cep-title">
-              <div class="service-card-header"><span class="service-icon icon-green"><svg class="i"><use href="#i-pin"/></svg></span><span class="service-tag">CONSULTA 01</span></div>
+              <div class="service-card-header"><span class="service-icon icon-green"><svg class="i">
+                    <use href="#i-pin" />
+                  </svg></span><span class="service-tag">CONSULTA 01</span></div>
               <h3 id="cep-title">Descubra um endereço pelo CEP</h3>
-              <p class="service-description">Digite os oito números do CEP para visualizar rua, bairro, cidade, estado e DDD.</p>
+              <p class="service-description">Digite os oito números do CEP para visualizar rua, bairro, cidade, estado e
+                DDD.</p>
               <form id="cep-form" class="lookup-form" novalidate>
                 <label class="field-label" for="cep-input">CEP do endereço</label>
-                <div class="input-action"><input id="cep-input" class="form-control form-control-lg" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" aria-describedby="cep-hint" required><button class="btn btn-dark action-button" id="cep-button" type="submit"><span class="button-label">Consultar CEP</span><svg class="i"><use href="#i-arrow"/></svg></button></div>
-                <div id="cep-hint" class="input-hint">Exemplo: <button type="button" class="hint-button" id="cep-example">01001-000</button> (Praça da Sé, SP)</div>
+                <div class="input-action"><input id="cep-input" class="form-control form-control-lg" type="text"
+                    inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000"
+                    aria-describedby="cep-hint" required><button class="btn btn-dark action-button" id="cep-button"
+                    type="submit"><span class="button-label">Consultar CEP</span><svg class="i">
+                      <use href="#i-arrow" />
+                    </svg></button></div>
+                <div id="cep-hint" class="input-hint">Exemplo: <button type="button" class="hint-button"
+                    id="cep-example">01001-000</button> (Praça da Sé, SP)</div>
               </form>
               <div id="cep-feedback" class="feedback-slot" aria-live="polite"></div>
               <div id="cep-result" class="result-slot" aria-live="polite">
-                <div class="empty-state"><span class="empty-icon"><svg class="i"><use href="#i-search"/></svg></span><span>Seu resultado aparecerá aqui após a consulta.</span></div>
+                <div class="empty-state"><span class="empty-icon"><svg class="i">
+                      <use href="#i-search" />
+                    </svg></span><span>Seu resultado aparecerá aqui após a consulta.</span></div>
               </div>
             </section>
           </div>
           <div class="col-lg-5">
             <section class="service-card service-card-blue card border-0 h-100" aria-labelledby="ddd-title">
-              <div class="service-card-header"><span class="service-icon icon-blue"><svg class="i"><use href="#i-phone"/></svg></span><span class="service-tag">CONSULTA 02</span></div>
+              <div class="service-card-header"><span class="service-icon icon-blue"><svg class="i">
+                    <use href="#i-phone" />
+                  </svg></span><span class="service-tag">CONSULTA 02</span></div>
               <h3 id="ddd-title">De onde é este DDD?</h3>
-              <p class="service-description">Descubra o estado e as cidades atendidas por um código de área telefônico.</p>
+              <p class="service-description">Descubra o estado e as cidades atendidas por um código de área telefônico.
+              </p>
               <form id="ddd-form" class="lookup-form" novalidate>
                 <label class="field-label" for="ddd-input">Código de área (DDD)</label>
-                <div class="input-action"><input id="ddd-input" class="form-control form-control-lg" type="text" inputmode="numeric" maxlength="2" placeholder="Ex.: 61" aria-describedby="ddd-hint" required><button class="btn btn-dark action-button" id="ddd-button" type="submit"><span class="button-label">Pesquisar</span><svg class="i"><use href="#i-arrow"/></svg></button></div>
-                <div id="ddd-hint" class="input-hint">Exemplo: <button type="button" class="hint-button" id="ddd-example">61</button> (Distrito Federal)</div>
+                <div class="input-action"><input id="ddd-input" class="form-control form-control-lg" type="text"
+                    inputmode="numeric" maxlength="2" placeholder="Ex.: 61" aria-describedby="ddd-hint" required><button
+                    class="btn btn-dark action-button" id="ddd-button" type="submit"><span
+                      class="button-label">Pesquisar</span><svg class="i">
+                      <use href="#i-arrow" />
+                    </svg></button></div>
+                <div id="ddd-hint" class="input-hint">Exemplo: <button type="button" class="hint-button"
+                    id="ddd-example">61</button> (Distrito Federal)</div>
               </form>
               <div id="ddd-feedback" class="feedback-slot" aria-live="polite"></div>
-              <div id="ddd-result" class="result-slot" aria-live="polite"><div class="empty-state"><span class="empty-icon"><svg class="i"><use href="#i-phone"/></svg></span><span>Os municípios associados ao DDD aparecerão aqui.</span></div></div>
+              <div id="ddd-result" class="result-slot" aria-live="polite">
+                <div class="empty-state"><span class="empty-icon"><svg class="i">
+                      <use href="#i-phone" />
+                    </svg></span><span>Os municípios associados ao DDD aparecerão aqui.</span></div>
+              </div>
             </section>
           </div>
         </div>
@@ -144,16 +258,42 @@
           <div class="col-lg-4">
             <p class="overline">PLANEJE COM ANTECEDÊNCIA</p>
             <h2 id="feriados-title">Seu ano, <span>mais organizado.</span></h2>
-            <p class="section-lead">Consulte os feriados nacionais do ano selecionado. Organize viagens, compromissos e dias de descanso.</p>
-            <div class="calendar-note"><svg class="i"><use href="#i-info"/></svg><p>Esta lista contempla <strong>feriados nacionais</strong> cadastrados na BrasilAPI. Pontos facultativos e feriados estaduais ou municipais podem não aparecer.</p></div>
+            <p class="section-lead">Consulte os feriados nacionais do ano selecionado. Organize viagens, compromissos e
+              dias de descanso.</p>
+            <div class="calendar-note"><svg class="i">
+                <use href="#i-info" />
+              </svg>
+              <p>Esta lista contempla <strong>feriados nacionais</strong> cadastrados na BrasilAPI. Pontos facultativos
+                e feriados estaduais ou municipais podem não aparecer.</p>
+            </div>
           </div>
           <div class="col-lg-8">
             <section class="calendar-panel" aria-label="Calendário de feriados">
-              <div class="panel-heading"><div><span class="panel-overline">CALENDÁRIO NACIONAL</span><h3>Feriados de <span id="holiday-year-label">2026</span></h3></div><div class="calendar-controls"><label class="visually-hidden" for="year-select">Ano dos feriados</label><select id="year-select" class="form-select year-select" aria-label="Ano dos feriados"></select><button id="holiday-reload" type="button" class="icon-button" title="Atualizar feriados" aria-label="Atualizar feriados"><svg class="i"><use href="#i-retry"/></svg></button></div></div>
-              <div class="holiday-toolbar"><div class="segmented" role="group" aria-label="Filtrar feriados"><button type="button" class="segment active" data-holiday-filter="all" aria-pressed="true">Todos</button><button type="button" class="segment" data-holiday-filter="future" aria-pressed="false">A partir de hoje</button></div><span id="holiday-count" class="count-label">Carregando...</span></div>
+              <div class="panel-heading">
+                <div><span class="panel-overline">CALENDÁRIO NACIONAL</span>
+                  <h3>Feriados de <span id="holiday-year-label">2026</span></h3>
+                </div>
+                <div class="calendar-controls"><label class="visually-hidden" for="year-select">Ano dos
+                    feriados</label><select id="year-select" class="form-select year-select"
+                    aria-label="Ano dos feriados"></select><button id="holiday-reload" type="button" class="icon-button"
+                    title="Atualizar feriados" aria-label="Atualizar feriados"><svg class="i">
+                      <use href="#i-retry" />
+                    </svg></button></div>
+              </div>
+              <div class="holiday-toolbar">
+                <div class="segmented" role="group" aria-label="Filtrar feriados"><button type="button"
+                    class="segment active" data-holiday-filter="all" aria-pressed="true">Todos</button><button
+                    type="button" class="segment" data-holiday-filter="future" aria-pressed="false">A partir de
+                    hoje</button></div><span id="holiday-count" class="count-label">Carregando...</span>
+              </div>
               <div id="holiday-feedback" class="feedback-slot" aria-live="polite"></div>
-              <div id="holiday-list" class="holiday-list" aria-live="polite"><div class="loading-message"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Buscando feriados...</div></div>
-              <div class="panel-footnote"><svg class="i"><use href="#i-clock"/></svg> Datas exibidas conforme o calendário civil brasileiro.</div>
+              <div id="holiday-list" class="holiday-list" aria-live="polite">
+                <div class="loading-message"><span class="spinner-border spinner-border-sm" role="status"
+                    aria-hidden="true"></span> Buscando feriados...</div>
+              </div>
+              <div class="panel-footnote"><svg class="i">
+                  <use href="#i-clock" />
+                </svg> Datas exibidas conforme o calendário civil brasileiro.</div>
             </section>
           </div>
         </div>
@@ -163,29 +303,103 @@
     <section class="section cities-section" id="municipios" aria-labelledby="municipios-title">
       <div class="container-xxl shell">
         <div class="section-intro d-flex flex-wrap align-items-end justify-content-between gap-3">
-          <div><p class="overline">CONHEÇA O TERRITÓRIO</p><h2 id="municipios-title">Um Brasil de <span>muitos lugares.</span></h2><p class="section-lead">Explore as unidades federativas do Brasil e encontre municípios a partir da base oficial de localidades do IBGE.</p></div>
+          <div>
+            <p class="overline">CONHEÇA O TERRITÓRIO</p>
+            <h2 id="municipios-title">Um Brasil de <span>muitos lugares.</span></h2>
+            <p class="section-lead">Explore as unidades federativas do Brasil e encontre municípios a partir da base
+              oficial de localidades do IBGE.</p>
+          </div>
           <div class="section-number">03 <span>/ 03</span></div>
         </div>
         <div class="municipal-panel">
           <div class="row g-4 align-items-end">
-            <div class="col-md-6 col-lg-4"><label for="state-select" class="field-label">Escolha uma unidade federativa</label><select id="state-select" class="form-select form-select-lg" disabled><option value="">Carregando estados...</option></select></div>
-            <div class="col-md-6 col-lg-5"><label for="city-search" class="field-label">Filtre a lista de municípios</label><div class="search-wrap"><svg class="i"><use href="#i-search"/></svg><input id="city-search" class="form-control form-control-lg" type="search" placeholder="Nome do município" disabled></div></div>
-            <div class="col-lg-3"><div class="city-stat" id="city-stat"><strong>—</strong><span>municípios encontrados</span></div></div>
+            <div class="col-md-6 col-lg-4"><label for="state-select" class="field-label">Escolha uma unidade
+                federativa</label><select id="state-select" class="form-select form-select-lg" disabled>
+                <option value="">Carregando estados...</option>
+              </select></div>
+            <div class="col-md-6 col-lg-5"><label for="city-search" class="field-label">Filtre a lista de
+                municípios</label>
+              <div class="search-wrap"><svg class="i">
+                  <use href="#i-search" />
+                </svg><input id="city-search" class="form-control form-control-lg" type="search"
+                  placeholder="Nome do município" disabled></div>
+            </div>
+            <div class="col-lg-3">
+              <div class="city-stat" id="city-stat"><strong>—</strong><span>municípios encontrados</span></div>
+            </div>
           </div>
           <div id="states-feedback" class="feedback-slot" aria-live="polite"></div>
           <div id="cities-feedback" class="feedback-slot" aria-live="polite"></div>
-          <div class="cities-result-header"><span id="cities-caption">Selecione um estado para explorar seus municípios</span><span id="cities-region" class="region-pill" hidden></span></div>
-          <div id="cities-list" class="row g-3 city-list" aria-live="polite"><div class="col-12"><div class="empty-cities"><svg class="i"><use href="#i-map"/></svg><span>Os nomes dos municípios aparecerão aqui.</span></div></div></div>
-          <div class="text-center"><button id="cities-more" type="button" class="btn btn-outline-dark cities-more" hidden>Mostrar mais municípios <svg class="i"><use href="#i-arrow"/></svg></button></div>
+          <div class="cities-result-header"><span id="cities-caption">Selecione um estado para explorar seus
+              municípios</span><span id="cities-region" class="region-pill" hidden></span></div>
+          <div id="cities-list" class="row g-3 city-list" aria-live="polite">
+            <div class="col-12">
+              <div class="empty-cities"><svg class="i">
+                  <use href="#i-map" />
+                </svg><span>Os nomes dos municípios aparecerão aqui.</span></div>
+            </div>
+          </div>
+          <div class="text-center"><button id="cities-more" type="button" class="btn btn-outline-dark cities-more"
+              hidden>Mostrar mais municípios <svg class="i">
+                <use href="#i-arrow" />
+              </svg></button></div>
         </div>
       </div>
     </section>
 
-    <section class="about-section" id="sobre" aria-labelledby="sobre-title"><div class="container-xxl shell"><div class="row align-items-center g-4"><div class="col-lg-7"><p class="overline overline-light">TECNOLOGIA A SERVIÇO DAS PESSOAS</p><h2 id="sobre-title">Dados públicos são mais úteis quando <em>todos conseguem acessar.</em></h2><p>O Ponto Público é um projeto educacional de utilidade pública. Reúne, de forma simples, dados de três serviços abertos: ViaCEP, BrasilAPI e IBGE. As consultas são feitas diretamente do seu navegador, sem armazenar os campos digitados em um servidor próprio.</p><div class="source-pills"><a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">ViaCEP <svg class="i"><use href="#i-external"/></svg></a><a href="https://brasilapi.com.br/" target="_blank" rel="noopener noreferrer">BrasilAPI <svg class="i"><use href="#i-external"/></svg></a><a href="https://servicodados.ibge.gov.br/api/docs/localidades" target="_blank" rel="noopener noreferrer">IBGE <svg class="i"><use href="#i-external"/></svg></a></div></div><div class="col-lg-5"><div class="about-emblem" aria-hidden="true"><span class="emblem-ring ring-one"></span><span class="emblem-ring ring-two"></span><span class="emblem-core"><svg class="i"><use href="#i-compass"/></svg></span><span class="emblem-point point-one"></span><span class="emblem-point point-two"></span></div></div></div></div></section>
+    <section class="about-section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container-xxl shell">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <p class="overline overline-light">TECNOLOGIA A SERVIÇO DAS PESSOAS</p>
+            <h2 id="sobre-title">Dados públicos são mais úteis quando <em>todos conseguem acessar.</em></h2>
+            <p>O Ponto Público é um projeto educacional de utilidade pública. Reúne, de forma simples, dados de três
+              serviços abertos: ViaCEP, BrasilAPI e IBGE. As consultas são feitas diretamente do seu navegador, sem
+              armazenar os campos digitados em um servidor próprio.</p>
+            <div class="source-pills"><a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">ViaCEP
+                <svg class="i">
+                  <use href="#i-external" />
+                </svg></a><a href="https://brasilapi.com.br/" target="_blank" rel="noopener noreferrer">BrasilAPI <svg
+                  class="i">
+                  <use href="#i-external" />
+                </svg></a><a href="https://servicodados.ibge.gov.br/api/docs/localidades" target="_blank"
+                rel="noopener noreferrer">IBGE <svg class="i">
+                  <use href="#i-external" />
+                </svg></a></div>
+          </div>
+          <div class="col-lg-5">
+            <div class="about-emblem" aria-hidden="true"><span class="emblem-ring ring-one"></span><span
+                class="emblem-ring ring-two"></span><span class="emblem-core"><svg class="i">
+                  <use href="#i-compass" />
+                </svg></span><span class="emblem-point point-one"></span><span class="emblem-point point-two"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="container-xxl shell"><div class="row g-3 align-items-center"><div class="col-md-6"><a href="#inicio" class="brand brand-footer"><span class="brand-symbol"><svg class="i"><use href="#i-compass"/></svg></span><span>Ponto<span class="brand-accent">Público</span><span class="brand-period">.</span></span></a><p>Informação que aproxima. Projeto acadêmico sem fins comerciais.</p></div><div class="col-md-6 footer-right"><span>Desenvolvido com HTML, CSS, JavaScript e Bootstrap.</span><a href="#inicio">Voltar ao topo ↑</a></div></div><div class="footer-divider"></div><div class="footer-small"><span>© <span id="footer-year">2026</span> Ponto Público.</span><span>Dados sujeitos à disponibilidade e atualização das APIs de origem.</span></div></div></footer>
+  <footer class="site-footer">
+    <div class="container-xxl shell">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6"><a href="#inicio" class="brand brand-footer"><span class="brand-symbol"><svg class="i">
+                <use href="#i-compass" />
+              </svg></span><span>Ponto<span class="brand-accent">Público</span><span
+                class="brand-period">.</span></span></a>
+          <p>Informação que aproxima. Projeto acadêmico sem fins comerciais.</p>
+        </div>
+        <div class="col-md-6 footer-right"><span>Desenvolvido com HTML, CSS, JavaScript e Bootstrap.</span><a
+            href="#inicio">Voltar ao topo ↑</a></div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-small"><span>© <span id="footer-year">2026</span> Ponto Público.</span><span>Dados sujeitos à
+          disponibilidade e atualização das APIs de origem.</span></div>
+    </div>
+  </footer>
 
-  <div id="toast" class="copy-toast" role="status" aria-live="polite" hidden><svg class="i"><use href="#i-check"/></svg><span id="toast-text">Copiado!</span></div>
+  <div id="toast" class="copy-toast" role="status" aria-live="polite" hidden><svg class="i">
+      <use href="#i-check" />
+    </svg><span id="toast-text">Copiado!</span></div>
 </body>
+
 </html>
